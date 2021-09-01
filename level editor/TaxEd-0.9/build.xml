@@ -1,0 +1,39 @@
+<project name="TaxEd" default="dist" basedir=".">
+	<description>
+		Ant build file for the TaxEd project
+	</description>
+		
+	<property name="src" location="src" />
+	<property name="build" location="build" />
+	<property name="jarFile" location="TaxEd.jar" />
+
+	<target name="init">
+		<tstamp />
+		<mkdir dir="${build}" />
+	</target>
+
+	<target name="copy_resources">
+		<copy file="${src}/taxed/sonic.gif" 
+			tofile="${build}/taxed/sonic.gif" />
+		<copy file="${src}/taxani/tails.gif"
+			tofile="${build}/taxani/tails.gif" />
+		<mkdir dir="${build}/icons" />
+		<copy file="${src}/icons/taxed.gif" tofile="${build}/icons/taxed.gif" />
+		<copy file="${src}/icons/taxani.gif" tofile="${build}/icons/taxani.gif" />
+		<copy file="${src}/icons/exit.gif" tofile="${build}/icons/exit.gif" />
+		<copy file="${src}/icons/launcher.gif" tofile="${build}/icons/launcher.gif" />
+	</target>
+
+	<target name="compile" depends="init, copy_resources">
+		<javac srcdir="${src}" destdir="${build}" debug="on" />
+	</target>
+	
+	<target name="dist" depends="compile">
+		<jar jarfile="${jarFile}" basedir="${build}" manifest="Manifest.txt" />
+	</target>
+	
+	<target name="clean">
+		<delete dir="${build}" />
+		<delete file="${jarFile}" />
+	</target>
+</project>

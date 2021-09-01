@@ -1,0 +1,26 @@
+This code can be used freely, in any way one wishes, as long as the following
+conditions are respected:
+
+1. When this program or derivatives of it are distributed in binary 
+form, 
+   the distributing party must always offer the corresponding source code.
+   The binaries and the source code don't have to be distributed together;
+   the distributing party must just describe how to obtain source code
+   clearly.
+
+2. When a part of source code of this program is included in another program,
+   that program will be considered a derivative of this ("TaxEd") program,
+   for the conditions and purposes of this license.
+
+3. The authors and the developers of this program must always be mentioned
+   in appropriate notices in the source code, in the accompanying documentation 
+   and in advertising.
+   Notices in source code must always mention all contributors;
+   notices in other media may make mention in forms such as: "the developers of TaxEd".
+
+4. No warranty is given or implied for any purpose
+
+GLOSSARY
+---------------------
+Binary - JAR file and invididual Java class files
+Source Code - Java source code
